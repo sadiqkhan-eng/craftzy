@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft.zy Header Replica</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary-color: #c19b76; /* The beige/tan color */
+            --text-dark: #1a1a1a;
+            --text-grey: #666;
+            --bg-light: #f3f3f3;
+            --white: #ffffff;
+            --border-radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Layout Utility --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- 1. Top Bar (Black) --- */
+        .top-bar {
+            background-color: #111;
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 13px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .promo-text i {
+            margin-right: 8px;
+            transform: rotate(90deg); /* Style the tag icon slightly */
+        }
+
+        .promo-code {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .top-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-links li {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        .top-links li:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- 2. Main Header (White) --- */
+        .main-header {
+            background-color: var(--white);
+            padding: 25px 0;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            color: var(--primary-color);
+        }
+
+        .logo-text h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .logo-text span {
+            color: var(--primary-color);
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            margin-top: -2px;
+        }
+
+        /* Info Widgets (Order, Call, Cart) */
+        .header-widgets {
+            display: flex;
+            gap: 30px;
+        }
+
+        .widget {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        .widget-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .widget-label {
+            font-size: 12px;
+            color: var(--text-grey);
+            margin-bottom: 2px;
+        }
+
+        .widget-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* --- 3. Navigation Bar (Beige) --- */
+        .nav-bar {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+        }
+
+        .nav-bar .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Shop Categories Button */
+        .categories-btn {
+            background-color: var(--white);
+            color: var(--text-dark);
+            border: none;
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 220px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .categories-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Search Bar */
+        .search-container {
+            flex-grow: 1;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .search-select {
+            border: none;
+            border-right: 1px solid #ddd;
+            padding: 0 15px;
+            color: var(--text-grey);
+            font-size: 14px;
+            outline: none;
+            background: transparent;
+            height: 35px;
+            cursor: pointer;
+        }
+
+        .search-input {
+            flex-grow: 1;
+            border: none;
+            padding: 0 15px;
+            font-size: 14px;
+            outline: none;
+            color: var(--text-dark);
+        }
+
+        .search-btn {
+            background-color: #111;
+            color: var(--white);
+            border: none;
+            padding: 10px 25px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .header-widgets {
+                display: none; /* Hide widgets on smaller screens like most e-comm sites */
+            }
+            .nav-bar .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .categories-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="promo-text">
+                    <i class="fa-solid fa-tag"></i>
+                    Get upto 25% Cashback on first Order: <span class="promo-code">GET25OFF</span>
+                </div>
+                <ul class="top-links">
+                    <li><i class="fa-regular fa-user"></i> My Account <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></li>
+                    <li><img src="https://flagcdn.com/16x12/gb.png" alt="UK Flag"> Language <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></li>
+                    <li>$ Currency <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container">
+                <a href="#" class="logo">
+                    <div class="logo-icon"><i class="fa-brands fa-ravelry"></i></div>
+                    <div class="logo-text">
+                        <h1>CRAFT<span>.zy</span></h1>
+                        <p>Boutique Style Shop</p>
+                    </div>
+                </a>
+
+                <div class="header-widgets">
+                    <div class="widget">
+                        <div class="icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="widget-info">
+                            <span class="widget-label">Order Status</span>
+                            <span class="widget-value">Track Order</span>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="icon-box"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="widget-info">
+                            <span class="widget-label">Call Us Now</span>
+                            <span class="widget-value">0123-45-6789</span>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div class="widget-info">
+                            <span class="widget-label">Checkout</span>
+                            <span class="widget-value">0 Products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <div class="container">
+                <button class="categories-btn" id="catBtn">
+                    <span>Shop Categories</span>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="search-container">
+                    <select class="search-select">
+                        <option>Categories</option>
+                        <option>Yarn</option>
+                        <option>Needles</option>
+                        <option>Patterns</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search" id="searchInput">
+                    <button class="search-btn" onclick="performSearch()">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // --- JavaScript Logic ---
+
+        // 1. Categories Toggle Interaction
+        const catBtn = document.getElementById('catBtn');
+        
+        catBtn.addEventListener('click', () => {
+            // For this demo, we will just log to console or alert
+            // In a real app, this would toggle a dropdown menu class
+            console.log("Toggling Categories Menu...");
+            
+            // Simple visual feedback
+            catBtn.style.backgroundColor = catBtn.style.backgroundColor === 'rgb(240, 240, 240)' ? '#fff' : '#f0f0f0';
+        });
+
+        // 2. Search Functionality
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            if(query) {
+                alert(`Searching for: ${query}`);
+            } else {
+                // Focus input if empty
+                document.getElementById('searchInput').focus();
+                document.getElementById('searchInput').placeholder = "Please type here...";
+            }
+        }
+
+        // 3. Hover effects for dropdown arrows (Optional JS enhancement)
+        const dropdowns = document.querySelectorAll('.top-links li');
+        dropdowns.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const icon = item.querySelector('.fa-chevron-down');
+                if(icon) icon.style.transform = "rotate(180deg)";
+            });
+            item.addEventListener('mouseleave', () => {
+                const icon = item.querySelector('.fa-chevron-down');
+                if(icon) icon.style.transform = "rotate(0deg)";
+            });
+        });
+    </script>
+</body>
+</html>

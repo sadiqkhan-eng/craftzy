@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craft.zy Store - Complete Page Replica</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* --- CSS Reset & Variables --- */
+      :root {
+        --primary-color: #c19b76;
+        --text-dark: #1a1a1a;
+        --text-grey: #666;
+        --bg-light: #f3f3f3;
+        --bg-hero: #cfcfcf;
+        --white: #ffffff;
+        --border-radius: 4px;
+        --star-color: #f7b84b;
+        --footer-bg: #222222; /* Darker color for the footer */
+        --footer-text: #cccccc;
+        --footer-accent: #666666;
+        --brand-promo-bg: #c19b76; /* Same as primary-color */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+      button {
+        cursor: pointer;
+      }
+
+      /* --- Layout Utility --- */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* =========================================
+           1. HEADER & NAVIGATION
+           ========================================= */
+      /* (Styles omitted for brevity - same as previous) */
+
+      .top-bar {
+        background-color: #111;
+        color: var(--white);
+        padding: 10px 0;
+        font-size: 13px;
+      }
+      .top-bar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .promo-text i {
+        margin-right: 8px;
+        transform: rotate(90deg);
+      }
+      .promo-code {
+        font-weight: 700;
+        color: #fff;
+      }
+      .top-links {
+        display: flex;
+        gap: 20px;
+      }
+      .top-links li {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.3s;
+      }
+      .top-links li:hover {
+        color: var(--primary-color);
+      }
+      .main-header {
+        background-color: var(--white);
+        padding: 25px 0;
+      }
+      .main-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-dark);
+      }
+      .logo-icon {
+        font-size: 32px;
+        color: var(--primary-color);
+      }
+      .logo-text h1 {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+      .logo-text span {
+        color: var(--primary-color);
+      }
+      .logo-text p {
+        font-size: 12px;
+        color: var(--primary-color);
+        letter-spacing: 1px;
+        margin-top: -2px;
+      }
+      .header-widgets {
+        display: flex;
+        gap: 30px;
+      }
+      .widget {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .icon-box {
+        width: 45px;
+        height: 45px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: var(--text-dark);
+      }
+      .widget-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .widget-label {
+        font-size: 12px;
+        color: var(--text-grey);
+        margin-bottom: 2px;
+      }
+      .widget-value {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+      .nav-bar {
+        background-color: var(--primary-color);
+        padding: 15px 0;
+      }
+      .nav-bar .container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .categories-btn {
+        background-color: var(--white);
+        color: var(--text-dark);
+        border: none;
+        padding: 12px 20px;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 220px;
+        transition: background 0.3s;
+      }
+      .categories-btn:hover {
+        background-color: #f0f0f0;
+      }
+      .search-container {
+        flex-grow: 1;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        padding: 5px;
+      }
+      .search-select {
+        border: none;
+        border-right: 1px solid #ddd;
+        padding: 0 15px;
+        color: var(--text-grey);
+        font-size: 14px;
+        outline: none;
+        background: transparent;
+        height: 35px;
+        cursor: pointer;
+      }
+      .search-input {
+        flex-grow: 1;
+        border: none;
+        padding: 0 15px;
+        font-size: 14px;
+        outline: none;
+        color: var(--text-dark);
+      }
+      .search-btn {
+        background-color: #111;
+        color: var(--white);
+        border: none;
+        padding: 10px 25px;
+        border-radius: var(--border-radius);
+        font-weight: 500;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: background 0.3s;
+      }
+      .search-btn:hover {
+        background-color: #333;
+      }
+
+      /* =========================================
+           2-6. (HERO, BANNERS, PRODUCTS, NEWSLETTER) 
+           ========================================= */
+      /* (Styles omitted for brevity - same as previous) */
+
+      .hero-section {
+        background-color: var(--bg-hero);
+        position: relative;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin-bottom: 50px;
+      }
+      .hero-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 0 5%;
+      }
+      .hero-image-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+      }
+      .hero-image-col img {
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        width: 500px;
+        height: 600px;
+        object-position: top;
+      }
+      .hero-text-col {
+        flex: 1;
+        padding-left: 50px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+      .hero-text-col::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.4);
+        filter: blur(25px);
+        z-index: -1;
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      }
+      .hero-title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+      }
+      .hero-subtitle {
+        font-size: 20px;
+        color: #555;
+        font-weight: 300;
+        margin-bottom: 30px;
+      }
+      .shop-now-btn {
+        background-color: #333;
+        color: #fff;
+        padding: 12px 35px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        transition: transform 0.2s, background 0.3s;
+      }
+      .shop-now-btn:hover {
+        background-color: #000;
+        transform: translateY(-2px);
+      }
+      .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #555;
+        transition: background 0.3s;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .arrow-left {
+        left: 30px;
+      }
+      .arrow-right {
+        right: 30px;
+      }
+
+      /* Chat Widget */
+      .chat-widget {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 100;
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .chat-bubble {
+        background-color: #cfe2ff;
+        padding: 8px 12px;
+        border-radius: 8px 8px 8px 0;
+        font-size: 12px;
+        color: #084298;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .chat-bubble .close-chat {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        font-size: 10px;
+        color: #333;
+        cursor: pointer;
+      }
+      .chat-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background-color: #333;
+      }
+      .chat-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Banners & Features */
+      .promo-banners {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+      .banner-item {
+        flex: 1;
+        display: flex;
+        background-color: var(--bg-hero);
+        min-height: 280px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        position: relative;
+        align-items: center;
+      }
+      .banner-content {
+        position: absolute;
+        right: 40px;
+        text-align: center;
+        z-index: 5;
+        padding: 20px;
+      }
+      .banner-content h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 5px;
+      }
+      .banner-content p {
+        font-size: 15px;
+        color: var(--text-grey);
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+      .banner-btn {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 8px 25px;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 13px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+      .banner-btn.dark {
+        background-color: var(--text-dark);
+        color: var(--white);
+      }
+      .banner-btn:hover {
+        background-color: #a88362;
+      }
+      .banner-btn.dark:hover {
+        background-color: #444;
+      }
+      .banner-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .banner-item:hover img {
+        transform: scale(1.05);
+      }
+      .banner-1 img {
+        width: 60%;
+        object-position: left;
+      }
+      .banner-2 img {
+        width: 100%;
+        object-position: 70% center;
+      }
+      .banner-2 .banner-content {
+        left: 40px;
+        right: auto;
+      }
+      .feature-widgets {
+        border: 1px solid #ddd;
+        background-color: var(--white);
+        padding: 30px 20px;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+      .feature-item {
+        padding: 0 15px;
+        flex: 1;
+      }
+      .feature-item i {
+        font-size: 32px;
+        color: var(--text-dark);
+        margin-bottom: 15px;
+      }
+      .feature-item h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 5px;
+      }
+      .feature-item p {
+        font-size: 12px;
+        color: var(--text-grey);
+        font-weight: 400;
+      }
+
+      /* Products */
+      .products-section {
+        padding: 20px 0;
+        margin-bottom: 80px;
+        text-align: center;
+      }
+      .section-header h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 5px;
+      }
+      .section-header .separator {
+        margin: 0 auto 30px;
+        width: 80px;
+        text-align: center;
+        color: var(--primary-color);
+        font-size: 18px;
+      }
+      .product-tabs {
+        display: inline-flex;
+        gap: 10px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        padding: 5px;
+        margin-bottom: 40px;
+      }
+      .product-tabs button {
+        background-color: transparent;
+        color: var(--text-grey);
+        border: none;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+      .product-tabs button.active {
+        background-color: var(--primary-color);
+        color: var(--white);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+      .product-card {
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        text-align: center;
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+        position: relative;
+        cursor: pointer;
+      }
+      .product-card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .product-image-box {
+        background-color: var(--bg-light);
+        padding: 20px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .product-image-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s;
+      }
+      .product-card:hover .product-image-box img {
+        transform: scale(1.05);
+      }
+      .product-info {
+        padding: 15px 10px 20px;
+      }
+      .product-rating {
+        color: var(--star-color);
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .product-title {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-grey);
+        height: 40px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .product-price {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+      .grid-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+      .grid-arrow {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        background-color: transparent;
+        color: var(--text-grey);
+        font-size: 12px;
+        transition: all 0.3s;
+      }
+      .grid-arrow:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+        border-color: var(--primary-color);
+      }
+
+      /* Final Banner */
+      .final-banner {
+        background-color: var(--bg-hero);
+        margin-top: 80px;
+        margin-bottom: 80px;
+        overflow: hidden;
+        position: relative;
+      }
+      .final-banner .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 350px;
+        padding: 0 15px;
+      }
+      .final-banner-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+      }
+      .final-banner-image img {
+        max-height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: left;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+      }
+      .final-banner-content {
+        flex: 1;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        left: 20%;
+        width: 50%;
+      }
+      .final-banner-content::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 120%;
+        background: rgba(255, 255, 255, 0.2);
+        filter: blur(20px);
+        z-index: -1;
+        border-radius: 60% 40% 50% 50% / 40% 60% 70% 30%;
+      }
+      .final-banner-title {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 5px;
+      }
+      .final-banner-subtitle {
+        font-size: 18px;
+        color: #555;
+        font-weight: 300;
+        margin-bottom: 30px;
+      }
+      .final-banner .shop-now-btn {
+        background-color: var(--text-dark);
+      }
+      .final-banner .shop-now-btn:hover {
+        background-color: #555;
+      }
+
+      /* Newsletter & Testimonials */
+      .promo-row {
+        display: flex;
+        gap: 30px;
+        align-items: stretch;
+        margin-bottom: 80px;
+      }
+      .newsletter-box {
+        flex: 1;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        padding: 40px 30px;
+        text-align: center;
+        border: 1px solid #eee;
+      }
+      .newsletter-box .icon {
+        font-size: 30px;
+        color: var(--text-dark);
+        margin-bottom: 15px;
+      }
+      .newsletter-box h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 10px;
+      }
+      .newsletter-box p {
+        font-size: 14px;
+        color: var(--text-grey);
+        font-weight: 300;
+        margin-bottom: 25px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .newsletter-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .newsletter-form input[type="email"] {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        flex-grow: 1;
+        max-width: 250px;
+        font-size: 14px;
+        outline: none;
+      }
+      .newsletter-form button {
+        background-color: var(--primary-color);
+        color: var(--white);
+        border: none;
+        padding: 10px 25px;
+        border-radius: var(--border-radius);
+        font-size: 14px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+      .newsletter-form button:hover {
+        background-color: #a88362;
+      }
+      .testimonial-box {
+        flex: 1;
+        background-color: var(--bg-light);
+        border-radius: var(--border-radius);
+        padding: 40px 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .reviewer-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid var(--white);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 0 auto 15px;
+      }
+      .reviewer-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .reviewer-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 15px;
+      }
+      .review-text {
+        font-size: 14px;
+        color: var(--text-grey);
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .review-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+      }
+      .review-dots span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+      }
+      .review-dots span:first-child {
+        background-color: var(--text-dark);
+      }
+      .post-product-banners {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 80px;
+      }
+      .post-banner-item {
+        flex: 1;
+        background-color: var(--bg-hero);
+        min-height: 250px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+      }
+      .post-banner-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .post-banner-item:hover img {
+        transform: scale(1.05);
+      }
+      .post-banner-content {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        z-index: 5;
+        text-align: left;
+        color: var(--white);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+      .post-banner-content h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .post-banner-content p {
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+      .post-banner-1 .post-banner-content {
+        color: var(--text-dark);
+        text-shadow: none;
+      }
+      .post-banner-2 .post-banner-content {
+        color: var(--white);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+      .post-banner-2 {
+        align-items: center;
+        justify-content: center;
+      }
+      .post-banner-2 img {
+        object-position: 50% 50%;
+      }
+      .post-banner-btn {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 8px 25px;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 13px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+      .post-banner-btn.dark {
+        background-color: var(--text-dark);
+      }
+      .post-banner-btn:hover {
+        background-color: #a88362;
+      }
+      .post-banner-btn.dark:hover {
+        background-color: #444;
+      }
+
+      /* =========================================
+           7. BRAND LOGOS & PROMO BAR (NEW SECTIONS)
+           ========================================= */
+
+      .brand-logos {
+        padding: 50px 0;
+        margin-bottom: 0px;
+        background-color: var(--white);
+        border-bottom: 1px solid #eee;
+      }
+
+      .brand-grid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .brand-logo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-grey);
+        transition: color 0.3s;
+        cursor: pointer;
+      }
+
+      .brand-logo-item:hover {
+        color: var(--text-dark);
+      }
+
+      .brand-logo-item svg {
+        width: 80px;
+        height: 40px;
+        fill: currentColor;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+      }
+
+      .brand-logo-item:hover svg {
+        opacity: 1;
+      }
+
+      .brand-logo-text {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 5px;
+        text-transform: uppercase;
+      }
+
+      .logo-small {
+        height: 35px; /* Adjust height for the Palomo icon */
+      }
+
+      /* --- Promotional Banner Bar --- */
+      .promo-bar-footer {
+        background-color: var(--brand-promo-bg);
+        color: var(--text-dark);
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      .promo-bar-footer .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .promo-bar-footer .content i {
+        color: var(--white);
+        margin-right: 10px;
+      }
+
+      .promo-bar-footer .shop-btn {
+        background-color: var(--white);
+        color: var(--text-dark);
+        padding: 12px 25px;
+        border-radius: var(--border-radius);
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        transition: background 0.3s;
+      }
+
+      .promo-bar-footer .shop-btn:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* =========================================
+           8. FOOTER (NEW SECTION)
+           ========================================= */
+
+      .main-footer {
+        background-color: var(--footer-bg);
+        color: var(--footer-text);
+        padding: 60px 0 20px;
+      }
+
+      .footer-widgets {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .footer-col h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .footer-col h4::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--primary-color);
+        margin-top: 5px;
+      }
+
+      .footer-col ul li {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .footer-col ul li a {
+        transition: color 0.3s;
+      }
+
+      .footer-col ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Center Column (Logo & Contact) */
+      .footer-contact-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-contact-col .logo {
+        margin-bottom: 15px;
+      }
+
+      .footer-contact-col .logo-text h1 {
+        font-size: 38px;
+        color: var(--white);
+      }
+      .footer-contact-col .logo-text p {
+        color: var(--primary-color);
+      }
+
+      .contact-info {
+        margin-top: 15px;
+      }
+
+      .contact-info p {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .contact-info .call-us {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--white);
+        margin-top: 15px;
+      }
+      .contact-info i {
+        margin-right: 8px;
+        color: var(--primary-color);
+      }
+
+      /* --- Copyright and Bottom Bar --- */
+      .footer-bottom {
+        border-top: 1px solid var(--footer-accent);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: var(--footer-accent);
+      }
+
+      .footer-bottom .social-icons a {
+        color: var(--footer-accent);
+        font-size: 16px;
+        margin-left: 15px;
+        transition: color 0.3s;
+      }
+
+      .footer-bottom .social-icons a:hover {
+        color: var(--white);
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 90;
+        transition: opacity 0.3s;
+      }
+      /* Mobile adjustment for chat widget */
+      @media (max-width: 600px) {
+        .scroll-to-top {
+          right: 70px; /* Move away from chat widget */
+        }
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        /* ... (Previous mobile styles remain) ... */
+        .promo-row,
+        .post-product-banners {
+          flex-direction: column;
+          gap: 40px;
+        }
+        .newsletter-form {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .newsletter-form input[type="email"] {
+          max-width: 100%;
+        }
+        .post-banner-item {
+          min-height: 200px;
+        }
+        .footer-widgets {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-col h4::after {
+          margin: 5px auto 0;
+        }
+        .footer-contact-col {
+          order: -1; /* Move logo/contact to the top on mobile */
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+        .footer-bottom .social-icons {
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+     <p style="color: black; text-align:center; margin: 299px; font-size: 5ren; background-color: black">&nbsp</p> 
+      <div class="top-bar">
+        <div class="container">
+          <div class="promo-text">
+            <i class="fa-solid fa-tag"></i> Get upto 25% Cashback on first
+            Order: <span class="promo-code">GET25OFF</span>
+          </div>
+          <ul class="top-links">
+            <li>
+              <i class="fa-regular fa-user"></i> My Account
+              <i class="fa-solid fa-chevron-down" style="font-size: 10px"></i>
+            </li>
+            <li>
+              <img src="https://flagcdn.com/16x12/gb.png" alt="UK Flag" />
+              Language
+              <i class="fa-solid fa-chevron-down" style="font-size: 10px"></i>
+            </li>
+            <li>
+              $ Currency
+              <i class="fa-solid fa-chevron-down" style="font-size: 10px"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-header">
+        <div class="container">
+          <a href="#" class="logo"
+            ><div class="logo-icon"><i class="fa-brands fa-ravelry"></i></div>
+            <div class="logo-text">
+              <h1>CRAFT<span>.zy</span></h1>
+              <p>Boutique Style Shop</p>
+            </div></a
+          >
+          <div class="header-widgets">
+            <div class="widget">
+              <div class="icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+              <div class="widget-info">
+                <span class="widget-label">Order Status</span
+                ><span class="widget-value">Track Order</span>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="icon-box">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="widget-info">
+                <span class="widget-label">Call Us Now</span
+                ><span class="widget-value">0123-45-6789</span>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="icon-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <div class="widget-info">
+                <span class="widget-label">Checkout</span
+                ><span class="widget-value">0 Products</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="container">
+          <button class="categories-btn" id="catBtn">
+            <span>Shop Categories</span><i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="search-container">
+            <select class="search-select">
+              <option>Categories</option>
+              <option>Yarn</option>
+              <option>Fashion</option></select
+            ><input
+              type="text"
+              class="search-input"
+              placeholder="Search"
+              id="searchInput"
+            /><button class="search-btn" onclick="performSearch()">
+              <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <button class="slider-arrow arrow-left" onclick="moveSlider(-1)">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="slider-arrow arrow-right" onclick="moveSlider(1)">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <div class="container hero-wrapper">
+        <div class="hero-image-col">
+          <img
+            src="./image.jpg"
+            alt="Fashion Model"
+          />
+        </div>
+        <div class="hero-text-col">
+          <h2 class="hero-title">The Pretty Fashion</h2>
+          <p class="hero-subtitle">Get Save 35% OFF On<br />This Weekend</p>
+          <button class="shop-now-btn">Shop Now</button>
+        </div>
+      </div>
+      <div class="chat-widget">
+        <div class="chat-bubble" id="chatBubble">
+          Need Help?<br />Speak to us here<i
+            class="fa-solid fa-xmark close-chat"
+            onclick="this.parentElement.style.display='none'"
+          ></i>
+        </div>
+        <div class="chat-avatar">
+          <img src="https://i.pravatar.cc/150?img=11" alt="Support Agent" />
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="promo-banners">
+        <div class="banner-item banner-1">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=700&auto=format&fit=crop"
+            alt="Women's Fashion"
+          />
+          <div class="banner-content">
+            <h3>Women's Style</h3>
+            <p>Discover Big Collection</p>
+            <button class="banner-btn">Big Sale</button>
+          </div>
+        </div>
+        <div class="banner-item banner-2">
+          <img
+            src="https://images.unsplash.com/photo-1593032463286-9a2503248677?q=80&w=700&auto=format&fit=crop"
+            alt="Men's Fashion"
+          />
+          <div class="banner-content">
+            <h3>Stylus Wear</h3>
+            <p>Exclusive on Seasons</p>
+            <button class="banner-btn dark">Shop It</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-widgets">
+        <div class="feature-item">
+          <i class="fa-solid fa-earth-americas"></i>
+          <h4>Free Shipping</h4>
+          <p>On Order Over $199.00</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-headset"></i>
+          <h4>24*7 Support</h4>
+          <p>On Demand Support</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-credit-card"></i>
+          <h4>Online Payment</h4>
+          <p>Online Payment services</p>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="section-header">
+          <h2>Trending Products</h2>
+          <div class="separator"><i class="fa-solid fa-wave-square"></i></div>
+        </div>
+
+        <div class="product-tabs">
+          <button class="active">Latest</button>
+          <button>Featured</button>
+          <button>Bestseller</button>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1542385150-e3740e532b2f?q=80&w=300&auto=format&fit=crop"
+                alt="Red Sweater"
+              />
+            </div>
+            <div class="product-info">
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-regular fa-star"></i>
+              </div>
+              <span class="product-title"
+                >Suspendisse Lacus Lacus Suscipit Laboriosam Nisi</span
+              >
+              <p class="product-price">$241.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1557007204-6ac9748b656a?q=80&w=300&auto=format&fit=crop"
+                alt="Tan Mules"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Aliquam Quat Voluptatem</span>
+              <p class="product-price">$122.00</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1620935398254-8c83a8b418a0?q=80&w=300&auto=format&fit=crop"
+                alt="Red Shirt"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Quia Autem Veleuminium</span>
+              <p class="product-price">$122.00</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1614769065181-e2d93e155c59?q=80&w=300&auto=format&fit=crop"
+                alt="Brown Hoodie"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Perspiciatis Unde Omnis</span>
+              <p class="product-price">$14.00</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1594957436034-7a91266e7413?q=80&w=300&auto=format&fit=crop"
+                alt="Light Boots"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Voluptas Sit Aspernatur</span>
+              <p class="product-price">$122.00</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1624641916361-a08316a75001?q=80&w=300&auto=format&fit=crop"
+                alt="Dark Trousers"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Voluptas Nulla Pariatur</span>
+              <p class="product-price">$122.00</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1587326442654-e06e300d2358?q=80&w=300&auto=format&fit=crop"
+                alt="Brown Tote Bag"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Quaerat Outt Voluptatem</span>
+              <p class="product-price">$122.00</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1619864223214-63309228416d?q=80&w=300&auto=format&fit=crop"
+                alt="Rusty Shirt"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-title">Aliquam Querat Voluptatem</span>
+              <p class="product-price">$122.00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-nav">
+          <button class="grid-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="grid-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <section class="final-banner">
+      <div class="final-banner-image">
+        <img
+          src="https://images.unsplash.com/photo-1547844146-24e5d8527a20?q=80&w=1500&auto=format&fit=crop"
+          alt="Stylish Man"
+        />
+      </div>
+      <div class="final-banner-content container">
+        <h2 class="final-banner-title">Pretty Life Style</h2>
+        <p class="final-banner-subtitle">Big Fashion week!</p>
+        <button class="shop-now-btn">Shop Now</button>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="promo-row">
+        <div class="newsletter-box">
+          <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+          <h3>Newsletter</h3>
+          <p>
+            Consectetur adeping elit. Sed do elumosonde on th temSed do
+            elumosonde on the temepolered at laboures.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+
+        <div class="testimonial-box">
+          <div class="reviewer-image">
+            <img src="https://i.pravatar.cc/150?img=17" alt="John Duff" />
+          </div>
+          <h4 class="reviewer-name">JOHN DUFF</h4>
+          <p class="review-text">
+            Duis faucibus enim vitae nunericalre mollfacilisis nullam lyufew
+            matis. Duis faucibus enim vitae nunericalre mollfacilisis nullam
+            lyufew mattis.
+          </p>
+          <div class="review-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <section class="post-product-banners">
+        <div class="post-banner-item post-banner-1">
+          <img
+            src="https://images.unsplash.com/photo-1582218081697-3f82064115e6?q=80&w=600&auto=format&fit=crop"
+            alt="Spring Sale"
+          />
+          <div class="post-banner-content">
+            <h4>Styles Wear</h4>
+            <p>Spring Season Sale</p>
+            <button class="post-banner-btn">Get 30% Off</button>
+          </div>
+        </div>
+
+        <div class="post-banner-item post-banner-2">
+          <img
+            src="https://images.unsplash.com/photo-1620921443673-82855173360b?q=80&w=600&auto=format&fit=crop"
+            alt="Fashion Trends"
+          />
+          <div class="post-banner-content">
+            <h4>New In Trends</h4>
+            <p>Fashion & Stylus Drug</p>
+            <button class="post-banner-btn dark">Go, Shop</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="brand-logos">
+      <div class="container brand-grid">
+        <div class="brand-logo-item">
+          <svg viewBox="0 0 100 50">
+            <path d="M50 0L30 50H70L50 0Z" style="fill: currentColor" />
+            <path d="M48 2L32 48H68L48 2Z" style="fill: var(--white)" />
+          </svg>
+          <span class="brand-logo-text">Louis Vuitton</span>
+        </div>
+        <div class="brand-logo-item">
+          <svg viewBox="0 0 100 50" class="logo-small">
+            <path
+              d="M50 0C50 0 35 15 35 30C35 45 65 45 65 30C65 15 50 0ZM50 20L50 40M40 30L60 30"
+              style="
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 5;
+                stroke-linecap: round;
+              "
+            />
+          </svg>
+          <span class="brand-logo-text">Jimmy Choo</span>
+        </div>
+        <div class="brand-logo-item">
+          <svg viewBox="0 0 100 50" class="logo-small">
+            <path
+              d="M40 50L50 10L60 50L70 50L60 0L40 0L30 50Z"
+              style="fill: currentColor"
+            />
+            <path
+              d="M50 10C55 20 60 30 70 35L80 35L60 10Z"
+              style="fill: currentColor; opacity: 0.8"
+            />
+          </svg>
+          <span class="brand-logo-text">Palomo</span>
+        </div>
+        <div class="brand-logo-item">
+          <svg viewBox="0 0 100 50">
+            <path d="M10 50L50 10L90 50Z" style="fill: currentColor" />
+            <path d="M15 45L50 20L85 45Z" style="fill: var(--white)" />
+            <path d="M10 50L50 30L90 50Z" style="fill: currentColor" />
+          </svg>
+          <span class="brand-logo-text">Adidas</span>
+        </div>
+        <div class="brand-logo-item">
+          <svg viewBox="0 0 100 50" class="logo-small">
+            <circle
+              cx="50"
+              cy="25"
+              r="15"
+              style="fill: none; stroke: currentColor; stroke-width: 5"
+            />
+            <path
+              d="M50 10L50 40M35 25L65 25"
+              style="
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 5;
+                stroke-linecap: round;
+              "
+            />
+          </svg>
+          <span class="brand-logo-text">Chanel</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-bar-footer">
+      <div class="container content">
+        <p>
+          <i class="fa-solid fa-tag"></i>Save Up To 50% OFF on first order..!
+        </p>
+        <button class="shop-btn">Shop Now</button>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-widgets">
+          <div class="footer-col">
+            <h4>My Account</h4>
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Gift Certificates</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Specials</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-contact-col">
+            <a href="#" class="logo">
+              <div class="logo-icon" style="color: var(--white)">
+                <i class="fa-brands fa-ravelry"></i>
+              </div>
+              <div class="logo-text">
+                <h1>CRAFT<span>.zy</span></h1>
+                <p>Boutique Style Shop</p>
+              </div>
+            </a>
+            <div class="contact-info">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>demo Store<br />United
+                States
+              </p>
+              <p><i class="fa-solid fa-envelope"></i>demo@gmail.com</p>
+              <p class="call-us">
+                <i class="fa-solid fa-phone"></i>Call us: 0123456789
+              </p>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Gift Certificates</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            Powered By
+            <a href="#" style="color: var(--white); font-weight: 600"
+              >OpenCart</a
+            >
+            Your Store &copy; 2025
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="scroll-to-top"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+    >
+      <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <script>
+      // --- JavaScript Logic ---
+      const catBtn = document.getElementById("catBtn");
+      catBtn.addEventListener("click", () => {
+        console.log("Categories Toggle Clicked");
+        catBtn.style.backgroundColor =
+          catBtn.style.backgroundColor === "rgb(240, 240, 240)"
+            ? "#fff"
+            : "#f0f0f0";
+      });
+
+      function performSearch() {
+        const query = document.getElementById("searchInput").value;
+        if (query) alert(`Searching for: ${query}`);
+        else document.getElementById("searchInput").focus();
+      }
+
+      // Hero Slider Logic (Simulation)
+      function moveSlider(direction) {
+        const content = document.querySelector(".hero-wrapper");
+        content.style.opacity = "0.5";
+        setTimeout(() => {
+          content.style.opacity = "1";
+          console.log("Slide changed direction: " + direction);
+        }, 200);
+      }
+
+      // Product Tabs Logic (Simulation)
+      document.querySelectorAll(".product-tabs button").forEach((button) => {
+        button.addEventListener("click", function () {
+          document
+            .querySelectorAll(".product-tabs button")
+            .forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+          console.log(`Switched to tab: ${this.textContent}`);
+        });
+      });
+    </script>
+  </body>
+</html>
